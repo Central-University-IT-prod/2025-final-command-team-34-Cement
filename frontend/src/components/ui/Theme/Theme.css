@@ -1,0 +1,14 @@
+.theme{
+    display: block;
+}
+
+.theme {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.theme:hover {
+    opacity: 0.8;
+}

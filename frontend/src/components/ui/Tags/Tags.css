@@ -1,0 +1,46 @@
+.tags__container{
+    padding-bottom: 20px;
+}
+
+.tags{
+    padding: 20px;
+    max-width: 800px;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tags__item{
+    border: 1px solid var(--color-grey);
+    padding: 10px;
+    border-radius: 10px;
+    transition: color 0.35s ease;
+    color: #fff;
+}
+
+html:has(.light-theme) .tags .tags__item{
+    color: #000;
+}
+
+.add_tag{
+    max-width: 250px;
+    margin: clamp(10px, 1vw, 30px) auto 0 auto;
+}
+
+.tags__container .modal{
+    background-color: var(--color-white);
+    box-shadow: 0 4px 24px 0 #D5D8DD33;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: clamp(25px, 4vw, 40px);
+    border-radius: 32px;
+    width: clamp(305px, 70vw, 540px);
+}
+
+.tags__container .modal .label__input{
+    color: #000;
+}

@@ -1,0 +1,19 @@
+.message{
+    padding: 20px;
+    border-radius: 7px;
+    background: #1DA1F2;
+    color: var(--color-white);
+    position: fixed;
+    z-index: 99;
+    bottom: 30px;
+    left: -100%;
+    translate: -50% 0;
+    transition: left 0.45s ease;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 0 15px;
+    line-height: 1.4;
+}
+
+.message.message--active{
+    left: 50%;
+}

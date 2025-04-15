@@ -1,0 +1,33 @@
+FROM python:3.12-alpine3.21
+
+ARG SERVER_ADDRESS
+ARG SERVER_PORT
+
+WORKDIR /usr/src/app
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV SERVER_ADDRESS $SERVER_ADDRESS
+ENV SERVER_PORT $SERVER_PORT
+
+ENV POSTGRES_DB=cement
+ENV POSTGRES_USER=postgres
+ENV POSTGRES_PASSWORD=postgres
+ENV POSTGRES_HOST=db
+ENV POSTGRES_PORT=5432
+
+ENV MINIO_ADDRESS=minio:9000
+ENV MINIO_ROOT_USER=minio
+ENV MINIO_ROOT_PASSWORD=minio123
+
+ENV AI_FILTER_BASE_URL=ai-filter:7632
+
+
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY . .
+
+EXPOSE 80
+ENTRYPOINT sleep 3 && python3 ./manage.py migrate && python3 ./manage.py autocreate &&  python3 ./manage.py runserver REDACTED

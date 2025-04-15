@@ -1,0 +1,44 @@
+.home{
+    margin-top: 20px;
+}
+
+.home__buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.home .block__description{
+    text-align: center;
+    font-size: clamp(14px, 2vw, 18px);
+    line-height: 1.35;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.home .buttons__block{
+    max-width: 400px;
+    padding: clamp(10px, 2vw, 20px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 730px) {
+    
+    .home .buttons__block{
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .home .buttons__block .wrap__button{
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .home .block__description{
+        max-width: 100%;
+    }
+
+}

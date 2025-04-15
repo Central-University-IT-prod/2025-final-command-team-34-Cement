@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: cement
+    ports:
+      - 5432:5432
+    networks:
+      - net
+  app:
+    build: ./backend/
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+    networks:
+      - net
+
+  ai-filter:
+    build: ./ai-filter
+    ports:
+      - "7632:7632"
+    networks:
+      - net
+  
+  nginx:
+    build: ./nginx
+    ports:
+      - "8080:80"
+      - "443:443"
+    depends_on:
+      - app
+    networks:
+      - net  
+
+networks:
+    net:
+      driver: bridge
+

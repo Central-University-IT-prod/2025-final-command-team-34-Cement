@@ -1,0 +1,45 @@
+.label{
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.label .label__content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.label .label__input{
+    border: 1px solid var(--color-grey);
+    padding: 16px 34px 16px 24px;
+    border-radius: 12px;
+    background-color: #F1F4F8;
+    color: #000;
+}
+
+.label .label__input::placeholder{
+    color: var(--color-gray);
+}
+
+.label .visible_password{
+    position: absolute;
+    top: 55%;
+    right: 10px;
+}
+
+.label .visible_password__image{
+    width: 20px;
+    height: 20px;
+}
+
+.label .input_error{
+    position: absolute;
+    bottom: -20px;
+    color: var(--color-red);
+    font-size: 14px;
+}
+
+.label:has(.input_error) .label__input{
+    border: 1px solid var(--color-red);
+}

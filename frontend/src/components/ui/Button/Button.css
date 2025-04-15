@@ -1,0 +1,11 @@
+.button {
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent; /* Рамка по умолчанию прозрачная */
+    transition: all 0.45s ease; /* Добавляет плавный переход */
+    font-family: 'GothamProBold', sans-serif;
+    display: block;
+    width: 100%;
+}
+

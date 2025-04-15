@@ -1,0 +1,38 @@
+.login{
+    padding: clamp(10px, 2vw, 20px);
+}
+
+.login__description{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login__inputs{
+    max-width: 800px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.login__buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.login__buttons .button{
+    width: 250px;
+}
+
+@media (max-width: 768px) {
+
+    .login__buttons{
+        flex-direction: column;
+    }
+
+    .login__buttons .button{
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,59 @@
+.chart{
+    padding: clamp(5px, 2vw, 20px);
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart .chart__description{
+    color: var(--color-grey);
+    margin: 20px 0;
+    text-align: center;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.chart .table__cell:first-child{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.chart .table__cell:last-child{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.chart__table{
+    margin-top: 20px;
+}
+
+.chart__table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table__cell{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th{
+    color: var(--color-white);
+    background-color: var(--color-blue);
+}
+
+.chart__table .cell_name{
+    font-size: clamp(18px, 2vw, 22px);
+}
+
+.chart__table .center-text{
+    font-size: clamp(16px, 2vw, 18px);
+    font-weight: 600;
+    color: #31e012;
+}
+
+.chart__table .table__count{
+    font-size: clamp(16px, 2vw, 18px);
+    color: #b1a60c;
+    font-weight: 600;
+}
